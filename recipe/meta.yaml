@@ -1,5 +1,5 @@
 {% set name = "numpydoc_decorator" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
-  sha256: 926ac094d4423561a06d4c851f555bfafd0fd723a6f2d47b8449ae9d2f579c32
+  sha256: 9da7f0786f7977a7316cd5e8d4432155f3719c42e9dbe53397bdf4225233c29f
 
 build:
   noarch: python
