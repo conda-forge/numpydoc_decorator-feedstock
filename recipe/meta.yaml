@@ -1,5 +1,5 @@
 {% set name = "numpydoc_decorator" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
-  sha256: 880e4dcf634aa36fd4815051e21f79c8a370c3bcd5ba1fa5fb9a6e27222d4b8c
+  sha256: 8e09e63613fbec2bac96a93ac5e6cd322856c97dc8b91cb63d80bdcabdb9c8b8
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.9,<3.13
     - poetry-core
     - pip
   run:
-    - python >=3.8.1,<3.12
+    - python >=3.9,<3.13
     - typing_extensions
 
 test:
