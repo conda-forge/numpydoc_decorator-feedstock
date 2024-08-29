@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python >=3.10,<3.13
     - poetry-core
     - pip
   run:
-    - python >=3.9,<3.13
+    - python >=3.10,<3.13
     - typing_extensions
 
 test:
