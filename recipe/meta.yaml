@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "numpydoc_decorator" %}
 {% set version = "2.2.1" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
   sha256: c3b5b16bec1e7ed221adab7bd77a8a8acc0c7be1bb4e0871721b2a5d2f3145fa
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10,<3.13
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.10,<3.13
+    - python >={{ python_min }},<3.13
     - typing_extensions
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/alimanfoo/numpydoc_decorator
