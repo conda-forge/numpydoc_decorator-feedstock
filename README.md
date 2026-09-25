@@ -3,11 +3,9 @@ About numpydoc_decorator-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/numpydoc_decorator-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/alimanfoo/numpydoc_decorator
+Home: https://pypi.org/project/numpydoc_decorator/
 
 Package license: MIT
-
-Summary: Build numpy-style docstrings programmatically and apply them using a decorator
 
 Current build status
 ====================
