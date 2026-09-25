@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  version: "2.3.0"
+
+package:
+  name: numpydoc_decorator
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/n/numpydoc_decorator/numpydoc_decorator-${{ version }}.tar.gz
+  sha256: bc097eefe88975e410098c23e699de227d8df2972d8299a73538ad269b85a046
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - typing_extensions
+
+tests:
+  - python:
+      imports:
+        - numpydoc_decorator
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Build numpy-style docstrings programmatically and apply them using a decorator
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/numpydoc_decorator/
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
