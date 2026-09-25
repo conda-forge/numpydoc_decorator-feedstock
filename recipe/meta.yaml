@@ -1,19 +1,19 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "numpydoc_decorator" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
-  sha256: c3b5b16bec1e7ed221adab7bd77a8a8acc0c7be1bb4e0871721b2a5d2f3145fa
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/numpydoc_decorator-{{ version }}.tar.gz
+  sha256: bc097eefe88975e410098c23e699de227d8df2972d8299a73538ad269b85a046
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
