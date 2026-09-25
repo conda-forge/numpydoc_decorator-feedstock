@@ -35,7 +35,7 @@ tests:
         - "*"
 
 about:
-  summary:
+  summary: Build numpy-style docstrings programmatically and apply them using a decorator
   license: MIT
   license_file: LICENSE
   homepage: https://pypi.org/project/numpydoc_decorator/
